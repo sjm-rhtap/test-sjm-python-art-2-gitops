@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: test-sjm-python-art-2
+  janus-idp.io/tekton: test-sjm-python-art-2
+  backstage.io/kubernetes-id: test-sjm-python-art-2
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: test-sjm-python-art-2
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
